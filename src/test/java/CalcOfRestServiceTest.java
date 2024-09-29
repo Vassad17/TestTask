@@ -10,9 +10,9 @@ public class CalcOfRestServiceTest {
 
     @ParameterizedTest
     @CsvFileSource(files ="src/test/resources/count.csv")
-    void shouldtestCalcOfRestService(int income, int expense, int expected){
+    void shouldtestCalcOfRestService(int income, int expense, int expected, int balance){
         CalcOfRestService calcOfRestService = new CalcOfRestService();
         //int expected = 3;
-        int actual = calcOfRestService.calculate( income , expected);
+        int actual = calcOfRestService.calculate( income , expected, balance);
     }
 }
