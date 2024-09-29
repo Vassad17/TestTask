@@ -5,11 +5,11 @@ public class CalcOfRestService {
         int count = 0; // счётчик месяцев отдыха
         int threshold = 0; // остаток на счету
         for (int month = 0; month < 12; month++) {
-            if (threshold >= expenses) { // можем ли отдыхать?
+            if (threshold >= 20000) { // можем ли отдыхать?
                 count++; // увеличиваем счётчик месяцев отдыха
-                threshold = threshold - expenses;
+                threshold = (threshold - expenses) / 3;
             } else {
-                threshold = threshold + income;
+                threshold = threshold - expenses + income;
             }
         }
         return count;
