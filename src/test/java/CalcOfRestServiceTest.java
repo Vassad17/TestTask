@@ -6,7 +6,7 @@ import ru.netology.services.CalcOfRestService;
 
 public class CalcOfRestServiceTest {
 
-    @ParameterizedTest
+    @Test
     void shouldtestCalcOfRestService(
     ) {
         CalcOfRestService calcOfRestService = new CalcOfRestService();
